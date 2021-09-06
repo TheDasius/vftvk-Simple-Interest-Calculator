@@ -5,12 +5,21 @@
     </head>
     <body>
         <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
+		<form>
+			<label>Amount</label>
+			<input type="number"  id="principal">  
+			<br><br>
+			<label>Interest Rate</label>
+			<input type="range"  id="rate" min="0" max="100">  
+			<!-- need to use JS for showing the percentage -->
+			<br><br>
+			<!-- need to use JS here for the dropdown with a for loop -->
+			<label>No. of Years</label>
+			<input type="number"  id="years">  
+			<br><br>			
+			<button onclick="compute()">Compute Interest</button>
+		<!-- need to use JS here also for displaying the text that describes the calculated summary-->
+		</form>
+		<!-- need to add the icon, in the body or as a footer?-->
     </body>
 </html>
