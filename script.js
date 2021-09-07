@@ -26,7 +26,7 @@ function compute()
 }
 */
     
-Function savePrincipal()
+function savePrincipal()
 {
 	principal = document.getElementById("principal").value;
 }
@@ -34,35 +34,31 @@ Function savePrincipal()
 function getRate()
 {
 	rate = document.getElementById("rateRange").value;
-	//return rate;
+	return rate;
 }
-
-
+function getYear()
+{
+	year = document.getElementById("yearsSelect).value;
+	return year;
+}
 function setRateText()
 {
 	document.getElementById("rateText").innerHTML = getRate();
 }
-
-function formPrep()
-{
-	setRateText();
-	document.getElementById("yearsSelect").value = 1;
-}
-
-function getYear()
-{
-	year = document.getElementById("yearsSelect).value;
-	//return year;
-}
-
 function setYearSelect()
 {
 	var selectList = document.getElementById("yearsSelect");
 	for (var i = 1; i < 50; i++)
 	{
 		var option = document.createElement("option");
+		if (i == 1) {option.setAttribute("selected", "");}
 		option.value = i;
 		option.Text = i;
 		selectList.appendChild(option);
 	}
+}
+function formPrep()
+{
+	setRateText();
+	setYearSelect();
 }
