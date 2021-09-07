@@ -7,27 +7,29 @@
 		<form>
 			<h1>Simple Interest Calculator</h1>
 			<fieldset>
+				<div>
 				<label>Amount</label>
 				<input type="number"  id="principal">  
-				<br><br>
+				</div>
+				<div>
 				<label>Interest Rate</label>
-				<input type="range"  id="rateRange" min="0" max="100">
+				<input type="range"  id="rateRange" min="0" max="21">
 				<span id="rateText"></span>
 				<span>&#37;</span>
 				<!-- need to use JS for showing the percentage -->
-				<br><br>
+				</div>
 				<!-- need to use JS here for the dropdown with a for loop -->
+				<div>
 				<label>No. of Years</label>
 				<select id="years"></select>
-				<br><br>			
+				</div>			
+				<div>
 				<button onclick="compute()">Compute Interest</button> 
-				<br><br>
+				</div>
 				<span id="rateSummary"></span>
 		<!-- need to use JS here also for displaying the text that describes the calculated summary-->
 			</fieldset>
 			<footer>&copy Everyone Can Get Rich</footer>
 		</form>
-		
     </body>
-	
 </html>

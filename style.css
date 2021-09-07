@@ -16,6 +16,19 @@ fieldset
 {
 	padding-left: 20%;
 	text-align: left;
+	border: white;
+}
+div
+{
+	margin-bottom: 10px;
+}
+label
+{
+	width: 20%;
+}
+input
+{
+	padding-left: 5px;
 }
 footer{text-align: left;}
 
