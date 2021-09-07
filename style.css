@@ -16,7 +16,7 @@ fieldset
 {
 	padding-left: 20%;
 	text-align: left;
-	border: white;
+	border: none;
 }
 div
 {
@@ -24,7 +24,7 @@ div
 }
 label
 {
-	width: 20%;
+	width: 100px;
 }
 input
 {

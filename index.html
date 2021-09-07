@@ -13,21 +13,18 @@
 				</div>
 				<div>
 				<label>Interest Rate</label>
-				<input type="range"  id="rateRange" min="0" max="21">
+				<input type="range"  id="rateRange" min="0" max="21" onload="setRateText()" onchange="setRateText()">
 				<span id="rateText"></span>
 				<span>&#37;</span>
-				<!-- need to use JS for showing the percentage -->
 				</div>
-				<!-- need to use JS here for the dropdown with a for loop -->
 				<div>
 				<label>No. of Years</label>
-				<select id="years"></select>
+				<select id="yearsSelect" onload="setYearSelect()"></select>
 				</div>			
 				<div>
 				<button onclick="compute()">Compute Interest</button> 
 				</div>
 				<span id="rateSummary"></span>
-		<!-- need to use JS here also for displaying the text that describes the calculated summary-->
 			</fieldset>
 			<footer>&copy Everyone Can Get Rich</footer>
 		</form>
