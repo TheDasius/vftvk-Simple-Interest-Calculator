@@ -1,8 +1,8 @@
 function compute()
 {
-    if (isNaN(principal))
+    if (isNaN(principal) || parseInt(principal) == 0)
 	{
-		let msg = `Please enter a number for principal.`
+		let msg = `Please enter a positive number for principal.`
 		alert(msg);
 		principalInput.focus();
 		return false;
