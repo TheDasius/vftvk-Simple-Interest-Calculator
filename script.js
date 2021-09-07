@@ -1,49 +1,43 @@
-/*
 function compute()
 {
     if (isNaN(principal))
 	{
-		alert("Please enter a number for principal.");
-		document.getElementById("principal").focus();
+		let msg = `Please enter a number for principal.`
+		alert(msg);
+		principalInput.focus();
 		return false;
-	}	
-	//rate = getRate();
+	}
 	year = getYear();
 	if (isNaN(year))
 	{
-		alert("Please select the number of years.");
-		document.getElementById("yearsSelect).focus();
+		alert(`Please select the number of years. ${year}`);
+		document.getElementById("yearsSelect").focus();
 		return false;
 	}
-	payout = principal* rate * year;
+	payout = parseFloat(principal * (rate / 100 ) * year).toFixed(2);
+	today = new Date();
+	payYear = parseInt(today.getFullYear()) + parseInt(year);
 	summaryText = 
-	"If you desposit $(principal),\n \
-	at an interest rate of #(rate).\n \
-	You will receive an amount of $(payout),\n \
-	in the year $(getFullYear() + year)";
-	
+`If you desposit <mark>${principal}</mark>, <br>
+at an interest rate of <mark>${rate}%</mark>. <br>
+You will receive an amount of <mark>${payout}</mark>, <br>
+in the year <mark>${payYear}</mark>`;
 	document.getElementById("rateSummary").innerHTML = summaryText;
 }
-*/
-    
-function savePrincipal()
+function formPrep()
 {
-	principal = document.getElementById("principal").value;
-}
+	setRateText();
+	setYearSelect();
 	
+}
 function getRate()
 {
 	rate = document.getElementById("rateRange").value;
 	return rate;
 }
-function getYear()
-{
-	year = document.getElementById("yearsSelect).value;
-	return year;
-}
 function setRateText()
 {
-	document.getElementById("rateText").innerHTML = getRate();
+	document.getElementById("rateText").innerHTML = parseFloat(getRate()).toFixed(2);
 }
 function setYearSelect()
 {
@@ -53,12 +47,17 @@ function setYearSelect()
 		var option = document.createElement("option");
 		if (i == 1) {option.setAttribute("selected", "");}
 		option.value = i;
-		option.Text = i;
+		option.text = i;
 		selectList.appendChild(option);
 	}
 }
-function formPrep()
+function getYear()
 {
-	setRateText();
-	setYearSelect();
+	year = document.getElementById("yearsSelect").value;
+	return year;
+}
+function savePrincipal()
+{
+	principalInput = document.getElementById("principal");
+	principal = principalInput.value;
 }

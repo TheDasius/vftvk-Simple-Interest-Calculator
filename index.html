@@ -9,7 +9,7 @@
 			<fieldset>
 				<div>
 				<label>Amount</label>
-				<input type="number"  id="principal" required>  
+				<input type="number"  id="principal" min="0" required onchange="savePrincipal()">  
 				</div>
 				<div>
 				<label>Interest Rate</label>
@@ -19,10 +19,10 @@
 				</div>
 				<div>
 				<label>No. of Years</label>
-				<select id="yearsSelect" onload="setYearSelect()"></select>
+				<select id="yearsSelect"></select>
 				</div>			
 				<div>
-				<button onclick="compute()">Compute Interest</button> 
+				<button type="button" onclick="compute()">Compute Interest</button> 
 				</div>
 				<span id="rateSummary"></span>
 			</fieldset>
