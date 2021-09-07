@@ -6,8 +6,16 @@ h1
 }
 form
 {
+	border-radius: 25px;
 	background-color:white;
 	text-align: center;
+	height: 300px;
+	width: 550px;
+}
+fieldset 
+{
+	padding-left: 20%;
+	text-align: left;
 }
 footer{text-align: left;}
 
