@@ -1,15 +1,13 @@
 /*
 function compute()
 {
-	var principalInput = document.getElementById("principal");
-	principal = principalInput.value;
     if (isNaN(principal))
 	{
 		alert("Please enter a number for principal.");
-		principalInput.focus();
+		document.getElementById("principal").focus();
 		return false;
 	}	
-	rate = getRate();
+	//rate = getRate();
 	year = getYear();
 	if (isNaN(year))
 	{
@@ -28,10 +26,15 @@ function compute()
 }
 */
     
+Function savePrincipal()
+{
+	principal = document.getElementById("principal").value;
+}
+	
 function getRate()
 {
-	let rate = document.getElementById("rateRange").value;
-	return rate;
+	rate = document.getElementById("rateRange").value;
+	//return rate;
 }
 
 
@@ -40,11 +43,16 @@ function setRateText()
 	document.getElementById("rateText").innerHTML = getRate();
 }
 
-/*
+function formPrep()
+{
+	setRateText();
+	document.getElementById("yearsSelect").value = 1;
+}
+
 function getYear()
 {
-	let year = document.getElementById("yearsSelect).value;
-	return year;
+	year = document.getElementById("yearsSelect).value;
+	//return year;
 }
 
 function setYearSelect()
@@ -58,4 +66,3 @@ function setYearSelect()
 		selectList.appendChild(option);
 	}
 }
-*/

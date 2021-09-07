@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
-		<form>
+		<form onload="formPrep()">
 			<h1>Simple Interest Calculator</h1>
 			<fieldset>
 				<div>
@@ -13,7 +13,7 @@
 				</div>
 				<div>
 				<label>Interest Rate</label>
-				<input type="range"  id="rateRange" min="0" max="21" onload="setRateText()" onchange="setRateText()">
+				<input type="range"  id="rateRange" min="0" max="21" step="0.5" onchange="setRateText()">
 				<span id="rateText"></span>
 				<span>&#37;</span>
 				</div>
