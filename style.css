@@ -14,7 +14,6 @@ form
 	border-radius: 25px;
 	background-color:white;
 	text-align: center;
-	height: 300px;
 	width: 550px;
 }
 fieldset 
@@ -29,7 +28,8 @@ div
 }
 label
 {
-	width: 100px;
+	display: inline-block;
+	width: 20%;
 }
 input
 {

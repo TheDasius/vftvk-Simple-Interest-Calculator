@@ -1,8 +1,22 @@
+/*
 function compute()
 {
-    principal = document.getElementById("principal").value;
-    rate = getRate();
+	var principalInput = document.getElementById("principal");
+	principal = principalInput.value;
+    if (isNaN(principal))
+	{
+		alert("Please enter a number for principal.");
+		principalInput.focus();
+		return false;
+	}	
+	rate = getRate();
 	year = getYear();
+	if (isNaN(year))
+	{
+		alert("Please select the number of years.");
+		document.getElementById("yearsSelect).focus();
+		return false;
+	}
 	payout = principal* rate * year;
 	summaryText = 
 	"If you desposit $(principal),\n \
@@ -12,22 +26,25 @@ function compute()
 	
 	document.getElementById("rateSummary").innerHTML = summaryText;
 }
-        
+*/
+    
 function getRate()
 {
-	rate = document.getElementById("rateRange").value;
+	let rate = document.getElementById("rateRange").value;
 	return rate;
 }
 
-function getYear()
-{
-	year = document.getElementById("yearsSelect).value;
-	return year;
-}
 
 function setRateText()
 {
 	document.getElementById("rateText").innerHTML = getRate();
+}
+
+/*
+function getYear()
+{
+	let year = document.getElementById("yearsSelect).value;
+	return year;
 }
 
 function setYearSelect()
@@ -40,3 +57,5 @@ function setYearSelect()
 		option.Text = i;
 		selectList.appendChild(option);
 	}
+}
+*/
